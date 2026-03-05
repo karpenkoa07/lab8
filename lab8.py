@@ -42,13 +42,11 @@ while True:
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
-    cv2.rectangle(frame,
-                  (cX - 75, cY - 75),
-                  (cX + 75, cY + 75),
-                  (255, 0, 0), 2)
+    cv2.rectangle(frame, (cX - 75, cY - 75), (cX + 75, cY + 75), (255, 0, 0), 2)
 
     cv2.imshow('frame', frame)
     cv2.imshow('thresh', thresh)
 
 cap.release()
+
 cv2.destroyAllWindows()
